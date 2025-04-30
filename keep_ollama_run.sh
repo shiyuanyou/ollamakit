@@ -40,7 +40,7 @@ send_ping() {
         if [ $debug -eq 1 ]; then
             echo "Debug mode: Sending ping to Ollama for model: $model" >> "$LOG_FILE"
         else
-            echo "/nothinking hi" | ollama run "$model" >> "$LOG_FILE" 2>&1
+            echo "hi /no_think" | ollama run "$model" >> "$LOG_FILE" 2>&1
         fi
         echo "$(date): Ping completed for model: $model" >> "$LOG_FILE"
     done
